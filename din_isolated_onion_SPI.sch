@@ -278,10 +278,10 @@ Wire Wire Line
 Wire Wire Line
 	5055 1845 4565 1845
 $Comp
-L Connector:TestPoint TP1
+L Connector:TestPoint FW_RST1
 U 1 1 5D151FE3
 P 4565 2045
-F 0 "TP1" V 4519 2233 50  0000 L CNN
+F 0 "FW_RST1" V 4519 2233 50  0000 L CNN
 F 1 "TestPoint" V 4610 2233 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 4765 2045 50  0001 C CNN
 F 3 "~" H 4765 2045 50  0001 C CNN
@@ -289,7 +289,7 @@ F 3 "~" H 4765 2045 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2235 2810 2815 2810
+	2235 2810 2745 2810
 Wire Wire Line
 	2815 2810 2815 2145
 Wire Wire Line
@@ -299,9 +299,9 @@ Wire Wire Line
 Wire Wire Line
 	2750 2045 2750 2710
 Wire Wire Line
-	2750 2710 2235 2710
+	2750 2710 2645 2710
 Wire Wire Line
-	2235 2610 2685 2610
+	2235 2610 2550 2610
 Wire Wire Line
 	2685 2610 2685 1945
 Wire Wire Line
@@ -311,19 +311,19 @@ Wire Wire Line
 Wire Wire Line
 	2610 1845 2610 2510
 Wire Wire Line
-	2610 2510 2235 2510
+	2610 2510 2455 2510
 Wire Wire Line
 	3165 1745 2570 1745
 Wire Wire Line
 	2570 1745 2570 2410
 Wire Wire Line
-	2570 2410 2235 2410
+	2570 2410 2370 2410
 Wire Wire Line
 	3165 1645 2515 1645
 Wire Wire Line
 	2515 1645 2515 2310
 Wire Wire Line
-	2515 2310 2235 2310
+	2515 2310 2295 2310
 Wire Wire Line
 	2235 3510 2415 3510
 Wire Wire Line
@@ -428,25 +428,113 @@ Text GLabel 2235 2110 2    50   Output ~ 0
 Text GLabel 2235 2210 2    50   Input ~ 0
 3V3_O
 $Comp
-L Device:Jumper_NO_Small JP3
-U 1 1 5D16E0D1
-P 4595 4600
-F 0 "JP3" H 4595 4415 50  0000 C CNN
-F 1 "Jumper_NO_Small" H 4595 4506 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 4595 4600 50  0001 C CNN
-F 3 "~" H 4595 4600 50  0001 C CNN
-	1    4595 4600
+L Connector:TestPoint GP2
+U 1 1 5D16A3CD
+P 2295 2310
+F 0 "GP2" H 2237 2337 50  0000 R CNN
+F 1 "TestPoint" H 2237 2428 50  0000 R CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2495 2310 50  0001 C CNN
+F 3 "~" H 2495 2310 50  0001 C CNN
+	1    2295 2310
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:Jumper_NO_Small JP2
-U 1 1 5D16E11E
-P 4590 4435
-F 0 "JP2" H 4590 4250 50  0000 C CNN
-F 1 "Jumper_NO_Small" H 4590 4341 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 4590 4435 50  0001 C CNN
-F 3 "~" H 4590 4435 50  0001 C CNN
-	1    4590 4435
+L Connector:TestPoint GP5
+U 1 1 5D16A4AB
+P 2370 2410
+F 0 "GP5" H 2312 2437 50  0000 R CNN
+F 1 "TestPoint" H 2312 2528 50  0000 R CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2570 2410 50  0001 C CNN
+F 3 "~" H 2570 2410 50  0001 C CNN
+	1    2370 2410
 	-1   0    0    1   
 $EndComp
+Connection ~ 2370 2410
+Wire Wire Line
+	2370 2410 2235 2410
+$Comp
+L Connector:TestPoint GP6
+U 1 1 5D16A4F1
+P 2455 2510
+F 0 "GP6" H 2397 2537 50  0000 R CNN
+F 1 "TestPoint" H 2397 2628 50  0000 R CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2655 2510 50  0001 C CNN
+F 3 "~" H 2655 2510 50  0001 C CNN
+	1    2455 2510
+	-1   0    0    1   
+$EndComp
+Connection ~ 2455 2510
+Wire Wire Line
+	2455 2510 2235 2510
+$Comp
+L Connector:TestPoint GP7
+U 1 1 5D16A525
+P 2550 2610
+F 0 "GP7" H 2492 2637 50  0000 R CNN
+F 1 "TestPoint" H 2492 2728 50  0000 R CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2750 2610 50  0001 C CNN
+F 3 "~" H 2750 2610 50  0001 C CNN
+	1    2550 2610
+	-1   0    0    1   
+$EndComp
+Connection ~ 2550 2610
+Wire Wire Line
+	2550 2610 2685 2610
+$Comp
+L Connector:TestPoint GP19
+U 1 1 5D16A55F
+P 2645 2710
+F 0 "GP19" H 2587 2737 50  0000 R CNN
+F 1 "TestPoint" H 2587 2828 50  0000 R CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2845 2710 50  0001 C CNN
+F 3 "~" H 2845 2710 50  0001 C CNN
+	1    2645 2710
+	-1   0    0    1   
+$EndComp
+Connection ~ 2645 2710
+Wire Wire Line
+	2645 2710 2235 2710
+$Comp
+L Connector:TestPoint GP20
+U 1 1 5D16A5AD
+P 2745 2810
+F 0 "GP20" H 2687 2837 50  0000 R CNN
+F 1 "TestPoint" H 2687 2928 50  0000 R CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2945 2810 50  0001 C CNN
+F 3 "~" H 2945 2810 50  0001 C CNN
+	1    2745 2810
+	-1   0    0    1   
+$EndComp
+Connection ~ 2745 2810
+Wire Wire Line
+	2745 2810 2815 2810
+Connection ~ 2295 2310
+Wire Wire Line
+	2295 2310 2235 2310
+$Comp
+L Connector:TestPoint CS1
+U 1 1 5D16AF39
+P 2555 4545
+F 0 "CS1" H 2497 4572 50  0000 R CNN
+F 1 "TestPoint" H 2497 4663 50  0000 R CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2755 4545 50  0001 C CNN
+F 3 "~" H 2755 4545 50  0001 C CNN
+	1    2555 4545
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint CS2
+U 1 1 5D16B155
+P 2705 4545
+F 0 "CS2" H 2647 4572 50  0000 R CNN
+F 1 "TestPoint" H 2647 4663 50  0000 R CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2905 4545 50  0001 C CNN
+F 3 "~" H 2905 4545 50  0001 C CNN
+	1    2705 4545
+	-1   0    0    1   
+$EndComp
+Text GLabel 2555 4545 1    50   Input ~ 0
+CS1_O
+Text GLabel 2705 4545 1    50   Input ~ 0
+CS2_O
 $EndSCHEMATC
