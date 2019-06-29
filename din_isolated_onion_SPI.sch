@@ -397,10 +397,10 @@ F 3 "" H 9730 2435 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Jumper:Jumper_2_Bridged JP1
+L Jumper:Jumper_2_Bridged VCC1
 U 1 1 5D16821A
 P 3860 1120
-F 0 "JP1" H 3860 1315 50  0000 C CNN
+F 0 "VCC1" H 3860 1315 50  0000 C CNN
 F 1 "Jumper_2_Bridged" H 3860 1224 50  0000 C CNN
 F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 3860 1120 50  0001 C CNN
 F 3 "~" H 3860 1120 50  0001 C CNN
@@ -515,8 +515,8 @@ $Comp
 L Connector:TestPoint CS1
 U 1 1 5D16AF39
 P 2555 4545
-F 0 "CS1" H 2497 4572 50  0000 R CNN
-F 1 "TestPoint" H 2497 4663 50  0000 R CNN
+F 0 "CS1" H 2620 4765 50  0000 R CNN
+F 1 "ChipSel1" V 2550 5140 50  0001 R CNN
 F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2755 4545 50  0001 C CNN
 F 3 "~" H 2755 4545 50  0001 C CNN
 	1    2555 4545
@@ -526,8 +526,8 @@ $Comp
 L Connector:TestPoint CS2
 U 1 1 5D16B155
 P 2705 4545
-F 0 "CS2" H 2647 4572 50  0000 R CNN
-F 1 "TestPoint" H 2647 4663 50  0000 R CNN
+F 0 "CS2" H 2760 4765 50  0000 R CNN
+F 1 "ChipSel2" V 2695 5140 50  0001 R CNN
 F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2905 4545 50  0001 C CNN
 F 3 "~" H 2905 4545 50  0001 C CNN
 	1    2705 4545
@@ -537,4 +537,106 @@ Text GLabel 2555 4545 1    50   Input ~ 0
 CS1_O
 Text GLabel 2705 4545 1    50   Input ~ 0
 CS2_O
+$Comp
+L tpl5010-q1:TPL5010-Q1 U3
+U 1 1 5D173C02
+P 2730 5550
+F 0 "U3" H 2730 5915 50  0000 C CNN
+F 1 "TPL5010-Q1" H 2730 5824 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 2780 5550 50  0001 C CNN
+F 3 "" H 2780 5550 50  0001 C CNN
+	1    2730 5550
+	1    0    0    -1  
+$EndComp
+Text GLabel 2330 5450 0    50   Input ~ 0
+3V3_C
+Text GLabel 2330 5550 0    50   Input ~ 0
+GND_C
+$Comp
+L Device:R R1
+U 1 1 5D173F56
+P 2180 5650
+F 0 "R1" V 2020 5650 50  0000 C CNN
+F 1 "29.4K" V 2090 5645 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2110 5650 50  0001 C CNN
+F 3 "~" H 2180 5650 50  0001 C CNN
+	1    2180 5650
+	0    -1   -1   0   
+$EndComp
+Text GLabel 2030 5650 0    50   Input ~ 0
+GND_C
+Text GLabel 5055 1845 2    50   Input ~ 0
+~RST
+$Comp
+L Connector:TestPoint GND1
+U 1 1 5D176CB2
+P 2880 4550
+F 0 "GND1" H 2945 4765 50  0000 R CNN
+F 1 "GND" H 2945 4845 50  0001 R CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 3080 4550 50  0001 C CNN
+F 3 "~" H 3080 4550 50  0001 C CNN
+	1    2880 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint 3V3
+U 1 1 5D176D00
+P 3030 4555
+F 0 "3V3" H 3085 4765 50  0000 R CNN
+F 1 "TestPoint" V 3015 5155 50  0001 R CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 3230 4555 50  0001 C CNN
+F 3 "~" H 3230 4555 50  0001 C CNN
+	1    3030 4555
+	-1   0    0    1   
+$EndComp
+Text GLabel 2880 4550 1    50   Input ~ 0
+GND_C
+Text GLabel 3030 4555 1    50   Input ~ 0
+3V3_C
+Text GLabel 3530 5450 2    50   Output ~ 0
+~RST
+$Comp
+L Connector:TestPoint WAKE1
+U 1 1 5D178EE3
+P 3130 5550
+F 0 "WAKE1" V 3130 5738 50  0000 L CNN
+F 1 "TestPoint" V 3175 5738 50  0001 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 3330 5550 50  0001 C CNN
+F 3 "~" H 3330 5550 50  0001 C CNN
+	1    3130 5550
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint DONE1
+U 1 1 5D178F5E
+P 3130 5650
+F 0 "DONE1" V 3130 5837 50  0000 L CNN
+F 1 "TestPoint" V 3175 5838 50  0001 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 3330 5650 50  0001 C CNN
+F 3 "~" H 3330 5650 50  0001 C CNN
+	1    3130 5650
+	0    1    1    0   
+$EndComp
+$Comp
+L Jumper:Jumper_2_Bridged RST1
+U 1 1 5D17969E
+P 3330 5450
+F 0 "RST1" H 3330 5645 50  0000 C CNN
+F 1 "Jumper_2_Bridged" H 3330 5554 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 3330 5450 50  0001 C CNN
+F 3 "~" H 3330 5450 50  0001 C CNN
+	1    3330 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Graphic:Logo_Open_Hardware_Large LOGO1
+U 1 1 5D17A97C
+P 8355 5530
+F 0 "LOGO1" H 8355 6030 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Large" H 8355 5130 50  0001 C CNN
+F 2 "Symbol:OSHW-Logo2_7.3x6mm_SilkScreen" H 8355 5530 50  0001 C CNN
+F 3 "~" H 8355 5530 50  0001 C CNN
+	1    8355 5530
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
