@@ -88,7 +88,7 @@ CLK_O
 Text GLabel 3165 2645 0    50   Output ~ 0
 CS0_O
 Text GLabel 7350 2660 0    50   Output ~ 0
-MISO_O
+MISO_O_ISO
 Text GLabel 7350 2060 0    50   Input ~ 0
 CLK_O
 Text GLabel 7350 2160 0    50   Input ~ 0
@@ -428,10 +428,10 @@ Text GLabel 2235 2110 2    50   Output ~ 0
 Text GLabel 2235 2210 2    50   Input ~ 0
 3V3_O
 $Comp
-L Connector:TestPoint GP2
+L Connector:TestPoint GP11
 U 1 1 5D16A3CD
 P 2295 2310
-F 0 "GP2" H 2237 2337 50  0000 R CNN
+F 0 "GP11" H 2237 2337 50  0000 R CNN
 F 1 "TestPoint" H 2237 2428 50  0000 R CNN
 F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2495 2310 50  0001 C CNN
 F 3 "~" H 2495 2310 50  0001 C CNN
@@ -439,10 +439,10 @@ F 3 "~" H 2495 2310 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector:TestPoint GP5
+L Connector:TestPoint GP17
 U 1 1 5D16A4AB
 P 2370 2410
-F 0 "GP5" H 2312 2437 50  0000 R CNN
+F 0 "GP17" H 2312 2437 50  0000 R CNN
 F 1 "TestPoint" H 2312 2528 50  0000 R CNN
 F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2570 2410 50  0001 C CNN
 F 3 "~" H 2570 2410 50  0001 C CNN
@@ -453,10 +453,10 @@ Connection ~ 2370 2410
 Wire Wire Line
 	2370 2410 2235 2410
 $Comp
-L Connector:TestPoint GP6
+L Connector:TestPoint GP16
 U 1 1 5D16A4F1
 P 2455 2510
-F 0 "GP6" H 2397 2537 50  0000 R CNN
+F 0 "GP16" H 2397 2537 50  0000 R CNN
 F 1 "TestPoint" H 2397 2628 50  0000 R CNN
 F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2655 2510 50  0001 C CNN
 F 3 "~" H 2655 2510 50  0001 C CNN
@@ -467,10 +467,10 @@ Connection ~ 2455 2510
 Wire Wire Line
 	2455 2510 2235 2510
 $Comp
-L Connector:TestPoint GP7
+L Connector:TestPoint GP15
 U 1 1 5D16A525
 P 2550 2610
-F 0 "GP7" H 2492 2637 50  0000 R CNN
+F 0 "GP15" H 2492 2637 50  0000 R CNN
 F 1 "TestPoint" H 2492 2728 50  0000 R CNN
 F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2750 2610 50  0001 C CNN
 F 3 "~" H 2750 2610 50  0001 C CNN
@@ -495,10 +495,10 @@ Connection ~ 2645 2710
 Wire Wire Line
 	2645 2710 2235 2710
 $Comp
-L Connector:TestPoint GP20
+L Connector:TestPoint GP18
 U 1 1 5D16A5AD
 P 2745 2810
-F 0 "GP20" H 2687 2837 50  0000 R CNN
+F 0 "GP18" H 2687 2837 50  0000 R CNN
 F 1 "TestPoint" H 2687 2928 50  0000 R CNN
 F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2945 2810 50  0001 C CNN
 F 3 "~" H 2945 2810 50  0001 C CNN
@@ -618,12 +618,12 @@ F 3 "~" H 3330 5650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Jumper:Jumper_2_Bridged RST1
+L Jumper:Jumper_2_Open RST1
 U 1 1 5D17969E
 P 3330 5450
 F 0 "RST1" H 3330 5645 50  0000 C CNN
-F 1 "Jumper_2_Bridged" H 3330 5554 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 3330 5450 50  0001 C CNN
+F 1 "Jumper_2_Open" H 3330 5554 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 3330 5450 50  0001 C CNN
 F 3 "~" H 3330 5450 50  0001 C CNN
 	1    3330 5450
 	1    0    0    -1  
@@ -637,6 +637,260 @@ F 1 "Logo_Open_Hardware_Large" H 8355 5130 50  0001 C CNN
 F 2 "Symbol:OSHW-Logo2_7.3x6mm_SilkScreen" H 8355 5530 50  0001 C CNN
 F 3 "~" H 8355 5530 50  0001 C CNN
 	1    8355 5530
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LVC125 U4
+U 1 1 5D57B0AA
+P 5350 4210
+F 0 "U4" H 5350 4527 50  0000 C CNN
+F 1 "74LVC125" H 5350 4436 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 5350 4210 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LVC125" H 5350 4210 50  0001 C CNN
+	1    5350 4210
+	-1   0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LVC125 U4
+U 2 1 5D57B14F
+P 5350 4920
+F 0 "U4" H 5350 5237 50  0000 C CNN
+F 1 "74LVC125" H 5350 5146 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 5350 4920 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LVC125" H 5350 4920 50  0001 C CNN
+F 4 "SN74LVTH125PW" H 5350 4920 50  0001 C CNN "manf#"
+	2    5350 4920
+	-1   0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LVC125 U4
+U 3 1 5D57B1E6
+P 5350 5675
+F 0 "U4" H 5350 5992 50  0000 C CNN
+F 1 "74LVC125" H 5350 5901 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 5350 5675 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LVC125" H 5350 5675 50  0001 C CNN
+	3    5350 5675
+	-1   0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LVC125 U4
+U 5 1 5D57B314
+P 10325 3860
+F 0 "U4" H 10555 3906 50  0000 L CNN
+F 1 "74LVC125" H 10555 3815 50  0000 L CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 10325 3860 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LVC125" H 10325 3860 50  0001 C CNN
+	5    10325 3860
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 4210 5050 4920
+Connection ~ 5050 4920
+Wire Wire Line
+	5050 4920 5050 5675
+Text GLabel 5350 4460 2    50   Input ~ 0
+CS0_O
+Text GLabel 5350 5170 2    50   Input ~ 0
+CS1_O
+Text GLabel 5350 5925 2    50   Input ~ 0
+CS2_O
+Text GLabel 5045 4915 0    50   Output ~ 0
+MISO_O
+Text GLabel 5650 4210 2    50   Input ~ 0
+MISO_O_ISO
+Text GLabel 5650 4920 2    50   Input ~ 0
+MISO_O_ISO
+Text GLabel 5650 5675 2    50   Input ~ 0
+MISO_O_ISO
+Text GLabel 10325 4360 2    50   Output ~ 0
+GND_C
+Text GLabel 10325 3360 2    50   Output ~ 0
+3V3_C
+Text Label 2755 1645 0    50   ~ 0
+GP11
+Text Label 2755 1745 0    50   ~ 0
+GP17
+Text Label 2755 1845 0    50   ~ 0
+GP16
+Text Label 2755 1945 0    50   ~ 0
+GP15
+Text Label 2760 2045 0    50   ~ 0
+GP19
+Text Label 2835 2145 0    50   ~ 0
+GP18
+$Comp
+L Device:LED D1
+U 1 1 5D594F4E
+P 820 4315
+F 0 "D1" V 858 4198 50  0000 R CNN
+F 1 "LED" V 767 4198 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 820 4315 50  0001 C CNN
+F 3 "~" H 820 4315 50  0001 C CNN
+	1    820  4315
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5D59507F
+P 1005 4315
+F 0 "D2" V 1043 4198 50  0000 R CNN
+F 1 "LED" V 952 4198 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 1005 4315 50  0001 C CNN
+F 3 "~" H 1005 4315 50  0001 C CNN
+	1    1005 4315
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 5D597433
+P 1260 4315
+F 0 "D3" V 1298 4198 50  0000 R CNN
+F 1 "LED" V 1207 4198 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 1260 4315 50  0001 C CNN
+F 3 "~" H 1260 4315 50  0001 C CNN
+	1    1260 4315
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D4
+U 1 1 5D59743A
+P 1475 4315
+F 0 "D4" V 1513 4198 50  0000 R CNN
+F 1 "LED" V 1422 4198 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 1475 4315 50  0001 C CNN
+F 3 "~" H 1475 4315 50  0001 C CNN
+	1    1475 4315
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D5
+U 1 1 5D599647
+P 1710 4315
+F 0 "D5" V 1748 4198 50  0000 R CNN
+F 1 "LED" V 1657 4198 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 1710 4315 50  0001 C CNN
+F 3 "~" H 1710 4315 50  0001 C CNN
+	1    1710 4315
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D6
+U 1 1 5D59964E
+P 1925 4315
+F 0 "D6" V 1963 4198 50  0000 R CNN
+F 1 "LED" V 1872 4198 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 1925 4315 50  0001 C CNN
+F 3 "~" H 1925 4315 50  0001 C CNN
+	1    1925 4315
+	0    -1   -1   0   
+$EndComp
+Text Label 820  4165 1    50   ~ 0
+GP11
+Text Label 1005 4165 1    50   ~ 0
+GP17
+Text Label 1260 4165 1    50   ~ 0
+GP16
+Text Label 1475 4165 1    50   ~ 0
+GP15
+Text Label 1710 4165 1    50   ~ 0
+GP19
+Text Label 1925 4165 1    50   ~ 0
+GP18
+$Comp
+L Device:R R2
+U 1 1 5D5C1488
+P 820 4615
+F 0 "R2" H 890 4661 50  0000 L CNN
+F 1 "330R" H 890 4570 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 750 4615 50  0001 C CNN
+F 3 "~" H 820 4615 50  0001 C CNN
+	1    820  4615
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5D5C16C9
+P 1005 4615
+F 0 "R3" H 1075 4661 50  0000 L CNN
+F 1 "330R" H 1075 4570 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 935 4615 50  0001 C CNN
+F 3 "~" H 1005 4615 50  0001 C CNN
+	1    1005 4615
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5D5C18F9
+P 1260 4615
+F 0 "R4" H 1330 4661 50  0000 L CNN
+F 1 "330R" H 1330 4570 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1190 4615 50  0001 C CNN
+F 3 "~" H 1260 4615 50  0001 C CNN
+	1    1260 4615
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5D5C1991
+P 1475 4615
+F 0 "R5" H 1545 4661 50  0000 L CNN
+F 1 "330R" H 1545 4570 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1405 4615 50  0001 C CNN
+F 3 "~" H 1475 4615 50  0001 C CNN
+	1    1475 4615
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5D5C1B51
+P 1710 4615
+F 0 "R6" H 1780 4661 50  0000 L CNN
+F 1 "330R" H 1780 4570 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1640 4615 50  0001 C CNN
+F 3 "~" H 1710 4615 50  0001 C CNN
+	1    1710 4615
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	820  4765 1005 4765
+Connection ~ 1005 4765
+Wire Wire Line
+	1005 4765 1260 4765
+Connection ~ 1260 4765
+Wire Wire Line
+	1260 4765 1475 4765
+Connection ~ 1475 4765
+Wire Wire Line
+	1475 4765 1710 4765
+Connection ~ 1710 4765
+Wire Wire Line
+	2035 4765 2035 4870
+$Comp
+L Device:R R7
+U 1 1 5D5C1D4E
+P 1925 4615
+F 0 "R7" H 1995 4661 50  0000 L CNN
+F 1 "330R" H 1995 4570 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1855 4615 50  0001 C CNN
+F 3 "~" H 1925 4615 50  0001 C CNN
+	1    1925 4615
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1710 4765 1925 4765
+Connection ~ 1925 4765
+Wire Wire Line
+	1925 4765 2035 4765
+$Comp
+L power:GNDD #PWR09
+U 1 1 5D5C84C2
+P 2035 4870
+F 0 "#PWR09" H 2035 4620 50  0001 C CNN
+F 1 "GNDD" H 2039 4715 50  0000 C CNN
+F 2 "" H 2035 4870 50  0001 C CNN
+F 3 "" H 2035 4870 50  0001 C CNN
+	1    2035 4870
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
