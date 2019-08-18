@@ -1,4 +1,5 @@
 (sym_lib_table
   (lib (name SI8661AB-B-IS1)(type Legacy)(uri C:/Users/Tisham/Documents/kicad/din_isolated_onion_SPI/symbols/SI8661AB-B-IS1.lib)(options "")(descr ""))
   (lib (name tpl5010-q1)(type Legacy)(uri C:/Users/Tisham/Documents/kicad/din_isolated_onion_SPI/symbols/tpl5010-q1.lib)(options "")(descr ""))
+  (lib (name NL7SZ19)(type Legacy)(uri C:/Users/Tisham/Documents/kicad/din_isolated_onion_SPI/symbols/NL7SZ19.lib)(options "")(descr ""))
 )
