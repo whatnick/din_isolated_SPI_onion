@@ -93,12 +93,12 @@ Text GLabel 7350 2060 0    50   Input ~ 0
 CLK_O
 Text GLabel 7350 2160 0    50   Input ~ 0
 MOSI_O
-Text GLabel 7350 2260 0    50   Input ~ 0
+Text GLabel 2410 6365 0    50   Input ~ 0
 CS0_O
 Text GLabel 7350 2460 0    50   Input ~ 0
-CS1_O
+CSMUX_1
 Text GLabel 7350 2560 0    50   Input ~ 0
-CS2_O
+CS_SPARE
 Text GLabel 9150 2060 2    50   Output ~ 0
 CLK_E
 Text GLabel 9150 2160 2    50   Output ~ 0
@@ -511,32 +511,10 @@ Wire Wire Line
 Connection ~ 2295 2310
 Wire Wire Line
 	2295 2310 2235 2310
-$Comp
-L Connector:TestPoint CS1
-U 1 1 5D16AF39
-P 2555 4545
-F 0 "CS1" H 2620 4765 50  0000 R CNN
-F 1 "ChipSel1" V 2550 5140 50  0001 R CNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2755 4545 50  0001 C CNN
-F 3 "~" H 2755 4545 50  0001 C CNN
-	1    2555 4545
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:TestPoint CS2
-U 1 1 5D16B155
-P 2705 4545
-F 0 "CS2" H 2760 4765 50  0000 R CNN
-F 1 "ChipSel2" V 2695 5140 50  0001 R CNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2905 4545 50  0001 C CNN
-F 3 "~" H 2905 4545 50  0001 C CNN
-	1    2705 4545
-	-1   0    0    1   
-$EndComp
-Text GLabel 2555 4545 1    50   Input ~ 0
-CS1_O
-Text GLabel 2705 4545 1    50   Input ~ 0
-CS2_O
+Text GLabel 3010 6365 2    50   Output ~ 0
+CSMUX_0
+Text GLabel 3010 6565 2    50   Output ~ 0
+CSMUX_1
 $Comp
 L tpl5010-q1:TPL5010-Q1 U3
 U 1 1 5D173C02
@@ -690,11 +668,11 @@ Connection ~ 5050 4920
 Wire Wire Line
 	5050 4920 5050 5675
 Text GLabel 5350 4460 2    50   Input ~ 0
-CS0_O
+CSMUX_0
 Text GLabel 5350 5170 2    50   Input ~ 0
-CS1_O
+CSMUX_1
 Text GLabel 5350 5925 2    50   Input ~ 0
-CS2_O
+CS_SPARE
 Text GLabel 5045 4915 0    50   Output ~ 0
 MISO_O
 Text GLabel 5650 4210 2    50   Input ~ 0
@@ -892,5 +870,33 @@ F 2 "" H 2035 4870 50  0001 C CNN
 F 3 "" H 2035 4870 50  0001 C CNN
 	1    2035 4870
 	1    0    0    -1  
+$EndComp
+$Comp
+L NL7SZ19:NL7SZ19 U5
+U 1 1 5D5A3EC1
+P 2710 6615
+F 0 "U5" H 2710 7090 50  0000 C CNN
+F 1 "NL7SZ19" H 2710 6999 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 2710 6615 50  0001 C CNN
+F 3 "" H 2710 6615 50  0001 C CNN
+	1    2710 6615
+	1    0    0    -1  
+$EndComp
+Text GLabel 7350 2260 0    50   Input ~ 0
+CSMUX_0
+Text GLabel 3010 6465 2    50   Input ~ 0
+3V3_C
+Text GLabel 2410 6465 0    50   Input ~ 0
+GND_C
+$Comp
+L Connector:TestPoint MET_SEL1
+U 1 1 5D5B0E57
+P 2410 6565
+F 0 "MET_SEL1" V 2405 7050 50  0000 R CNN
+F 1 "MET_S" H 2475 6860 50  0001 R CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 2610 6565 50  0001 C CNN
+F 3 "~" H 2610 6565 50  0001 C CNN
+	1    2410 6565
+	0    -1   -1   0   
 $EndComp
 $EndSCHEMATC
