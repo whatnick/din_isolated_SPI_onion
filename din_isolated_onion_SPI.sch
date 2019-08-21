@@ -545,31 +545,9 @@ Text GLabel 2030 5650 0    50   Input ~ 0
 GND_C
 Text GLabel 5055 1845 2    50   Input ~ 0
 ~RST
-$Comp
-L Connector:TestPoint GND1
-U 1 1 5D176CB2
-P 2880 4550
-F 0 "GND1" H 2945 4765 50  0000 R CNN
-F 1 "GND" H 2945 4845 50  0001 R CNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 3080 4550 50  0001 C CNN
-F 3 "~" H 3080 4550 50  0001 C CNN
-	1    2880 4550
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:TestPoint 3V3
-U 1 1 5D176D00
-P 3030 4555
-F 0 "3V3" H 3085 4765 50  0000 R CNN
-F 1 "TestPoint" V 3015 5155 50  0001 R CNN
-F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 3230 4555 50  0001 C CNN
-F 3 "~" H 3230 4555 50  0001 C CNN
-	1    3030 4555
-	-1   0    0    1   
-$EndComp
-Text GLabel 2880 4550 1    50   Input ~ 0
+Text GLabel 2555 4585 0    50   Input ~ 0
 GND_C
-Text GLabel 3030 4555 1    50   Input ~ 0
+Text GLabel 2555 4685 0    50   Input ~ 0
 3V3_C
 Text GLabel 3530 5450 2    50   Output ~ 0
 ~RST
@@ -899,4 +877,43 @@ F 3 "~" H 2610 6565 50  0001 C CNN
 	1    2410 6565
 	0    -1   -1   0   
 $EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 5D5DAF0D
+P 9880 3965
+F 0 "C3" H 9972 4011 50  0000 L CNN
+F 1 "100nF" H 9972 3920 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9880 3965 50  0001 C CNN
+F 3 "~" H 9880 3965 50  0001 C CNN
+	1    9880 3965
+	1    0    0    -1  
+$EndComp
+Text GLabel 9880 3865 1    50   Input ~ 0
+3V3_C
+$Comp
+L power:GNDD #PWR010
+U 1 1 5D5DAF15
+P 9880 4065
+F 0 "#PWR010" H 9880 3815 50  0001 C CNN
+F 1 "GNDD" H 9884 3910 50  0000 C CNN
+F 2 "" H 9880 4065 50  0001 C CNN
+F 3 "" H 9880 4065 50  0001 C CNN
+	1    9880 4065
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x02_Odd_Even J4
+U 1 1 5D5DFAB5
+P 2755 4585
+F 0 "J4" H 2805 4802 50  0000 C CNN
+F 1 "Test_Power_Bridge" H 2805 4711 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 2755 4585 50  0001 C CNN
+F 3 "~" H 2755 4585 50  0001 C CNN
+	1    2755 4585
+	1    0    0    -1  
+$EndComp
+Text GLabel 3055 4585 2    50   Output ~ 0
+GND_I
+Text GLabel 3055 4685 2    50   Output ~ 0
+3V3_I
 $EndSCHEMATC
